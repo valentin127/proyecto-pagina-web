@@ -350,6 +350,10 @@ section { padding: 100px 48px; }
 ═══════════════════════════════════════ */
 #sobre { background: var(--white); }
 
+#sobre .section-title {
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+}
+
 .sobre-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -904,14 +908,34 @@ footer {
     text-align: center;
   }
 
-  #inicio { grid-template-columns: 1fr; }
-
-  .hero-left {
-    padding: 64px 32px;
-    min-height: 80vh;
+  #inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 
-  .hero-right { display: none; }
+  .hero-left {
+    padding: 64px 32px 48px;
+    min-height: auto;
+  }
+
+  .hero-right {
+    display: flex;
+    height: 380px;
+    padding: 0;
+  }
+
+  .hero-stats {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .stat {
+    padding: 8px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
 
   section { padding: 72px 24px; }
 
