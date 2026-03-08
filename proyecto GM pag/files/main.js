@@ -1,10 +1,6 @@
-/* ═══════════════════════════════════════
-   main.js — Interactividad del sitio
-═══════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 1. NAV: sombra al hacer scroll ──────────────────
   const navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', () => {
@@ -16,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 2. NAV: menú hamburguesa (mobile) ───────────────
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
 
@@ -31,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── 3. SCROLL REVEAL (IntersectionObserver) ─────────
   const revealEls = document.querySelectorAll('.reveal');
 
   if (revealEls.length > 0) {
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ── 4. FORMULARIO con Formspree ─────────────────────
   const form     = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
 
@@ -56,12 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Limpiar errores anteriores
       form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
       feedback.textContent = '';
       feedback.className = 'form-feedback';
 
-      // Validación
       const nombre = document.getElementById('nombre');
       const email  = document.getElementById('email');
       const motivo = document.getElementById('motivo');
@@ -89,12 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Deshabilitar botón mientras envía
       const btn = form.querySelector('.btn-submit');
       btn.textContent = 'Enviando...';
       btn.disabled = true;
 
-      // ── Envío a Formspree ──
       try {
         const response = await fetch('https://formspree.io/f/xpqyavze', {
           method: 'POST',
@@ -115,14 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.classList.add('error');
       }
 
-      // Restaurar botón
       btn.textContent = 'Enviar consulta →';
       btn.disabled = false;
     });
   }
 
 
-  // ── 5. SMOOTH SCROLL ────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -135,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ── UTILS ────────────────────────────────────────────
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
