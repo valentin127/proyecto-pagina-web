@@ -1,6 +1,4 @@
-/* ═══════════════════════════════════════
-   VARIABLES & RESET
-═══════════════════════════════════════ */
+
 :root {
   --cream:      #f7f4ef;
   --dark:       #1a1a18;
@@ -26,9 +24,6 @@ body {
   font-weight: 300;
 }
 
-/* ═══════════════════════════════════════
-   NAV
-═══════════════════════════════════════ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -95,9 +90,6 @@ nav.scrolled {
   color: var(--dark);
 }
 
-/* ═══════════════════════════════════════
-   HERO
-═══════════════════════════════════════ */
 #inicio {
   min-height: 100vh;
   display: grid;
@@ -317,9 +309,6 @@ nav.scrolled {
   color: var(--mid);
 }
 
-/* ═══════════════════════════════════════
-   SECCIONES – BASE
-═══════════════════════════════════════ */
 section { padding: 100px 48px; }
 
 .section-inner {
@@ -345,9 +334,6 @@ section { padding: 100px 48px; }
   margin-bottom: 48px;
 }
 
-/* ═══════════════════════════════════════
-   SOBRE MÍ
-═══════════════════════════════════════ */
 #sobre { background: var(--white); }
 
 #sobre .section-title {
@@ -409,9 +395,6 @@ section { padding: 100px 48px; }
   color: var(--mid);
 }
 
-/* ═══════════════════════════════════════
-   CURRÍCULUM
-═══════════════════════════════════════ */
 #cv { background: var(--cream); }
 
 .cv-grid {
@@ -464,9 +447,6 @@ section { padding: 100px 48px; }
   line-height: 1.6;
 }
 
-/* ═══════════════════════════════════════
-   SERVICIOS
-═══════════════════════════════════════ */
 #servicios { background: var(--dark); }
 
 #servicios .section-title { color: var(--white); }
@@ -511,9 +491,6 @@ section { padding: 100px 48px; }
   color: rgba(255,255,255,0.45);
 }
 
-/* ═══════════════════════════════════════
-   CONSULTORIOS
-═══════════════════════════════════════ */
 #consultorios { background: var(--cream); }
 
 .consultorios-grid {
@@ -578,7 +555,6 @@ section { padding: 100px 48px; }
   font-weight: 500;
 }
 
-/* ── Zonas ── */
 .zona-bloque { margin-bottom: 56px; }
 
 .zona-header {
@@ -619,9 +595,6 @@ section { padding: 100px 48px; }
   flex-direction: column;
 }
 
-/* ═══════════════════════════════════════
-   CONTACTO
-═══════════════════════════════════════ */
 #contacto { background: var(--white); }
 
 .contacto-grid {
@@ -691,7 +664,6 @@ section { padding: 100px 48px; }
 
 .whatsapp-btn:hover { background: #1ebe5d; }
 
-/* ── Obras sociales ── */
 .obras-sociales {
   margin-top: 24px;
   padding-top: 24px;
@@ -729,7 +701,6 @@ section { padding: 100px 48px; }
   border-color: var(--gold);
 }
 
-/* ── Formulario ── */
 .form-group { margin-bottom: 18px; }
 
 .form-group label {
@@ -802,9 +773,6 @@ section { padding: 100px 48px; }
 .form-feedback.success { color: #27ae60; }
 .form-feedback.error   { color: #c0392b; }
 
-/* ═══════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════ */
 footer {
   background: var(--dark);
   padding: 48px;
@@ -845,9 +813,6 @@ footer {
   letter-spacing: 0.05em;
 }
 
-/* ═══════════════════════════════════════
-   WHATSAPP FLOTANTE
-═══════════════════════════════════════ */
 .whatsapp-float {
   position: fixed;
   bottom: 28px;
@@ -869,9 +834,6 @@ footer {
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.65);
 }
 
-/* ═══════════════════════════════════════
-   ANIMACIONES
-═══════════════════════════════════════ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -888,9 +850,6 @@ footer {
   transform: translateY(0);
 }
 
-/* ═══════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════ */
 @media (max-width: 1100px) {
   .servicios-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -988,9 +947,6 @@ footer {
   .consultorios-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ═══════════════════════════════════════
-   LINKS DE INTERÉS
-═══════════════════════════════════════ */
 #links { background: var(--dark); }
 
 #links .section-title { color: var(--white); }
