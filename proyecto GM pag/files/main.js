@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const navbar = document.getElementById('navbar');
@@ -40,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealEls.forEach(el => observer.observe(el));
   }
-
 
   const form     = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -121,6 +120,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+
+
+  document.querySelectorAll('.faq-pregunta').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const respuesta = btn.nextElementSibling;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      document.querySelectorAll('.faq-pregunta').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        respuesta.classList.add('open');
+      }
+    });
+  });
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
